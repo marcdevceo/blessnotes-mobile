@@ -1,15 +1,11 @@
-import { Text, View } from "react-native";
+import { MainView, Title } from "@/ui-framework";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+    <MainView bg="primaryDark">
+      <Title color="onPrimary">BlessNotes</Title>
+    </MainView>
   );
 }
+
+
