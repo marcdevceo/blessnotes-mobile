@@ -4,21 +4,21 @@ import { colors, spacing, typography } from "@/ui-framework/theme";
 
 export default function BodyText({
   children,
-  color = "secondary",
+  color = "neutral",
   bg = "transparent",
   size = "base",
   weight = "regular",
   italic = false,
   align = "left",
-  opacity = 0,
+  opacity,
   lineHeight,
-  padding = "none",
-  pt = "none",
-  pb = "none",
-  pl = "none",
-  pr = "none",
-  px = "none",
-  py = "none",
+  padding,
+  pt,
+  pb,
+  pl,
+  pr,
+  px,
+  py,
   style,
 }: BaseTextProps) {
   return (
@@ -31,17 +31,21 @@ export default function BodyText({
           fontWeight: typography.fontWeight[weight],
           fontStyle: italic ? "italic" : "normal",
           textAlign: align,
-          opacity: opacity,
-          lineHeight: lineHeight
-            ? typography.lineHeight[lineHeight]
-            : undefined,
-          padding: spacing[padding],
-          paddingTop: spacing[pt],
-          paddingBottom: spacing[pb],
-          paddingLeft: spacing[pl],
-          paddingRight: spacing[pr],
-          paddingHorizontal: spacing[px],
-          paddingVertical: spacing[py],
+          ...(opacity && { opacity }),
+          ...(lineHeight && { lineHeight: typography.lineHeight[lineHeight] }),
+          ...(padding && { padding: spacing[padding] }),
+          ...(pt && { paddingTop: spacing[pt] }),
+          ...(pb && { paddingBottom: spacing[pb] }),
+          ...(pl && { paddingLeft: spacing[pl] }),
+          ...(pr && { paddingRight: spacing[pr] }),
+          ...(px && {
+            paddingLeft: spacing[px],
+            paddingRight: spacing[px],
+          }),
+          ...(py && {
+            paddingTop: spacing[py],
+            paddingBottom: spacing[py],
+          }),
         },
         style,
       ]}
@@ -50,3 +54,4 @@ export default function BodyText({
     </Text>
   );
 }
+

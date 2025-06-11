@@ -1,4 +1,4 @@
-import { SafeAreaView } from "react-native";
+import { View } from "react-native";
 import { BaseViewProps } from "./types-spacing";
 import { colors, spacing } from "@/ui-framework/theme";
 
@@ -10,66 +10,80 @@ export default function ContainerView({
   justify = "flex-start",
   alignItems = "flex-start",
   alignContent,
-  margin = "none",
-  mt = "none",
-  mb = "none",
-  ml = "none",
-  mr = "none",
-  mx = "none",
-  my = "none",
-  padding = "none",
-  pt = "none",
-  pb = "none",
-  pl = "none",
-  pr = "none",
-  px = "none",
-  py = "none",
-  gap = "none",
+  margin,
+  mt,
+  mb,
+  ml,
+  mr,
+  mx,
+  my,
+  padding,
+  pt,
+  pb,
+  pl,
+  pr,
+  px,
+  py,
+  gap,
   width,
   height,
   borderRadius,
   style,
 }: BaseViewProps) {
   return (
-    <SafeAreaView
+    <View
       style={[
         {
-          flex: flex,
-          flexDirection: flexDirection,
+          flex,
+          flexDirection,
           backgroundColor: colors[bg],
           justifyContent: justify,
-          alignItems: alignItems,
-          alignContent: alignContent,
-          margin: spacing[margin],
-          marginTop: spacing[mt],
-          marginBottom: spacing[mb],
-          marginLeft: spacing[ml],
-          marginRight: spacing[mr],
-          marginHorizontal: spacing[mx],
-          marginVertical: spacing[my],
-          padding: spacing[padding],
-          paddingTop: spacing[pt],
-          paddingBottom: spacing[pb],
-          paddingLeft: spacing[pl],
-          paddingRight: spacing[pr],
-          paddingHorizontal: spacing[px],
-          paddingVertical: spacing[py],
-          gap: spacing[gap],
-          width: typeof width === "string"
-              ? spacing[width]
-              : width,
-          height: typeof height === "string"
-              ? spacing[height]
-              : height,
-          borderRadius:
-            typeof borderRadius === "string"
-              ? spacing[borderRadius]
-              : borderRadius,
+          alignItems,
+          alignContent,
+          ...(margin && { margin: spacing[margin] }),
+          ...(mt && { marginTop: spacing[mt] }),
+          ...(mb && { marginBottom: spacing[mb] }),
+          ...(ml && { marginLeft: spacing[ml] }),
+          ...(mr && { marginRight: spacing[mr] }),
+          ...(mx && {
+            marginLeft: spacing[mx],
+            marginRight: spacing[mx],
+          }),
+          ...(my && {
+            marginTop: spacing[my],
+            marginBottom: spacing[my],
+          }),
+          ...(padding && { padding: spacing[padding] }),
+          ...(pt && { paddingTop: spacing[pt] }),
+          ...(pb && { paddingBottom: spacing[pb] }),
+          ...(pl && { paddingLeft: spacing[pl] }),
+          ...(pr && { paddingRight: spacing[pr] }),
+          ...(px && {
+            paddingLeft: spacing[px],
+            paddingRight: spacing[px],
+          }),
+          ...(py && {
+            paddingTop: spacing[py],
+            paddingBottom: spacing[py],
+          }),
+          ...(gap && { gap: spacing[gap] }),
+          ...(width && {
+            width: typeof width === "string" ? spacing[width] : width,
+          }),
+          ...(height && {
+            height: typeof height === "string" ? spacing[height] : height,
+          }),
+          ...(borderRadius && {
+            borderRadius:
+              typeof borderRadius === "string"
+                ? spacing[borderRadius]
+                : borderRadius,
+          }),
         },
         style,
       ]}
     >
       {children}
-    </SafeAreaView>
+    </View>
   );
 }

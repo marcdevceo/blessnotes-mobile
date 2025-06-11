@@ -6,7 +6,7 @@ export default function Subtitle({
   children,
   color = "secondary",
   bg = "transparent",
-  size = "xl",
+  size = "lg",
   weight = "extrabold",
   italic = false,
   align = "left",

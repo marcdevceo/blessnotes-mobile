@@ -4,7 +4,7 @@ import { colors, spacing } from "@/ui-framework/theme";
 
 export default function MainView({
   children,
-  bg = "background",
+  bg = "transparent",
   flex = 1,
   flexDirection,
   justify = "center",
