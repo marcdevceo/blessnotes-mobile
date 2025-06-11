@@ -2,14 +2,14 @@ import { Text } from "react-native";
 import { BaseTextProps } from "./types-text";
 import { colors, spacing, typography } from "@/ui-framework/theme";
 
-export default function Title({
+export default function Subtitle({
   children,
-  color = "primary",
+  color = "secondary",
   bg = "transparent",
-  size = "3xl",
+  size = "xl",
   weight = "extrabold",
   italic = false,
-  align = "center",
+  align = "left",
   padding = "none",
   pt = "none",
   pb = "none",
