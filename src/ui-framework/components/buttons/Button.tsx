@@ -1,6 +1,6 @@
 import { ActivityIndicator, Pressable, Text, View } from "react-native";
 import { BaseButtonProps } from "./types-buttons";
-import { buttonSizes, buttonVariants } from "./buttonVariant";
+import { buttonSizes, buttonVariants, shadowVariant } from "./buttonVariant";
 import { colors, spacing } from "@/ui-framework/theme";
 
 export default function Button({
@@ -14,6 +14,7 @@ export default function Button({
   iconLeft,
   iconRight,
   style,
+  shadow = false,
   textStyle,
 }: BaseButtonProps) {
   const variant = buttonVariants[buttonVariant];
@@ -37,6 +38,7 @@ export default function Button({
           borderRadius: size.borderRadius,
           opacity: disabled || loading ? 0.6 : 1,
         },
+        shadow ? shadowVariant : null,
         style,
       ]}
     >
@@ -53,6 +55,7 @@ export default function Button({
                 color: variant.textColor,
                 fontSize: size.fontSize,
                 fontWeight: variant.fontWeight,
+                textAlign: "center",
               },
               textStyle,
             ]}

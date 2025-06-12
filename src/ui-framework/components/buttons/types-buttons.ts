@@ -8,6 +8,7 @@ export type BaseButtonProps = {
   onPress?: () => void;
   buttonVariant?: keyof typeof buttonVariants;
   buttonSize?: keyof typeof buttonSizes;
+  shadow?: boolean;
   fullWidth?: boolean;
   px?: keyof typeof spacing,
   py?: keyof typeof spacing,

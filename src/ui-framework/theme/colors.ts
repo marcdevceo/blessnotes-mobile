@@ -3,6 +3,8 @@ export const colors = {
   primary: "#7C3AED", // Royal Purple (core)
   primaryDark: "#5B21B6", // Deep Indigo Purple
   primaryLight: "#C4B5FD", // Soft Lilac
+  surface: "#FFFFFF", // default white surface
+  overlay: "#F3F4F6", // modals, layers
   transparent: "transparent",
 
   // 🌈 Complementary Accents

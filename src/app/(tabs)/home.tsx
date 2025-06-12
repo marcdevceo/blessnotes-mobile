@@ -6,11 +6,12 @@ import { Image } from "react-native";
 
 export default function HomeScreen() {
   return (
-    <MainView bg="primary" flex={1} >
+    <MainView bg="primary" flex={1} gap="4xl" >
         <HomeHeader />
         <BibleVerse />
         <ContainerView alignItems="center" gap="xl" style={{ width: "100%" }}>
           <ContainerView
+            mb="xl"
             style={{
               shadowColor: colors.gold,
               shadowOffset: { width: 0, height: 2 },

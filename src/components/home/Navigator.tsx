@@ -5,7 +5,7 @@ import { Link } from "expo-router";
 
 export default function Navigator() {
   return (
-    <>
+    <ContainerView gap="lg">
       {pageLinks.map((link) => (
         <ContainerView
           key={link.route}
@@ -24,14 +24,16 @@ export default function Navigator() {
               color={colors.gold}
             />
           </ContainerView>
-          <Link href={link.route as any}>
+          <Link href={ link.route } asChild>
             <Button
                 title={link.buttonTitle}
                 buttonSize="sm"
+                shadow
+                style={{ width: 150 }}
             />
           </Link>
         </ContainerView>
       ))}
-    </>
+    </ContainerView>
   );
 }
