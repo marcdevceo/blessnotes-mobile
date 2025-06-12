@@ -3,18 +3,15 @@ import {
   ContainerView,
   Form,
   InputField,
+  MainView,
   Subtitle,
   Title,
 } from "@/ui-framework";
 
 export default function SignUp() {
   return (
-    <ContainerView
+    <MainView
       bg="primaryLight"
-      flex={1}
-      alignItems="center"
-      padding="md"
-      gap="lg"
     >
       <Title color="accentText">BlessNotes</Title>
       <Subtitle color="accentText">Sign Up Here</Subtitle>
@@ -34,6 +31,6 @@ export default function SignUp() {
         />
         <Button title="Create Account" onPress={handleSubmit} />
       </Form> */}
-    </ContainerView>
+    </MainView>
   );
 }

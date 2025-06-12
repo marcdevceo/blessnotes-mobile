@@ -11,7 +11,7 @@ import { router } from "expo-router";
 
 export default function Index() {
   return (
-    <MainView bg="primaryDark" gap="lg">
+    <MainView bg="primaryDark" gap="lg" justify="center" alignItems="center">
       <Title>BlessNotes</Title>
       <Subtitle align="center" color="neutralText">Start Your Day with Purpose and Peace</Subtitle>
       <FrostedCard margin="md">

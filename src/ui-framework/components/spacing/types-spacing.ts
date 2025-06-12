@@ -1,13 +1,9 @@
-import { colors, spacing, spacingPercentage } from "@/ui-framework/theme";
+import { colors, spacing } from "@/ui-framework/theme";
 import { StyleProp, ViewStyle } from "react-native";
-
-export type TopLevelColorKeys = {
-  [K in keyof typeof colors]: (typeof colors)[K] extends string ? K : never;
-}[keyof typeof colors];
 
 export type BaseViewProps = {
   children: React.ReactNode;
-  bg?: TopLevelColorKeys;
+  bg?: keyof typeof colors;
   flex?: 1 | 2 | 3 | 4 | 5;
   flexDirection?: "row" | "row-reverse" | "column" | "column-reverse" ;
   justify?:

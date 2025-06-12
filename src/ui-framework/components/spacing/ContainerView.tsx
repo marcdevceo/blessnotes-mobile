@@ -1,6 +1,6 @@
 import { View } from "react-native";
 import { BaseViewProps } from "./types-spacing";
-import { colors, spacing, spacingPercentage } from "@/ui-framework/theme";
+import { colors, spacing } from "@/ui-framework/theme";
 
 export default function ContainerView({
   children,
