@@ -4,9 +4,9 @@ import { colors, spacing, typography } from "@/ui-framework/theme";
 
 export default function Title({
   children,
-  color = "primary",
+  color = "primaryText",
   bg = "transparent",
-  size = "3xl",
+  size = "4xl",
   weight = "extrabold",
   italic = false,
   align = "center",
@@ -22,7 +22,7 @@ export default function Title({
   return (
     <Text
       style={[{
-        color: colors.text[color],
+        color: colors[color],
         backgroundColor: colors[bg],
         fontSize: typography.fontSize[size],
         fontWeight: typography.fontWeight[weight],

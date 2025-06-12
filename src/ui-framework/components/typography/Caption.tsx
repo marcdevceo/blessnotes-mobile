@@ -4,13 +4,13 @@ import { colors, spacing, typography } from "@/ui-framework/theme";
 
 export default function Caption({
   children,
-  color = "secondary",
+  color = "primaryText",
   bg = "transparent",
   size = "sm",
   weight = "regular",
   italic = false,
   align = "left",
-  opacity = 0,
+  opacity,
   lineHeight,
   padding = "none",
   pt = "none",
@@ -25,7 +25,7 @@ export default function Caption({
     <Text
       style={[
         {
-          color: colors.text[color],
+          color: colors[color],
           backgroundColor: colors[bg],
           fontSize: typography.fontSize[size],
           fontWeight: typography.fontWeight[weight],

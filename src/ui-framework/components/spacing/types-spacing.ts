@@ -1,4 +1,4 @@
-import { colors, spacing } from "@/ui-framework/theme";
+import { colors, spacing, spacingPercentage } from "@/ui-framework/theme";
 import { StyleProp, ViewStyle } from "react-native";
 
 export type TopLevelColorKeys = {
@@ -46,3 +46,4 @@ export type BaseViewProps = {
   overflow?: "visible" | "hidden" | "scroll";
   style?: StyleProp<ViewStyle>;
 };
+

@@ -4,7 +4,7 @@ import { colors, spacing, typography } from "@/ui-framework/theme";
 
 export default function BodyText({
   children,
-  color = "neutral",
+  color = "neutralText",
   bg = "transparent",
   size = "base",
   weight = "regular",
@@ -25,7 +25,7 @@ export default function BodyText({
     <Text
       style={[
         {
-          color: colors.text[color],
+          color: colors[color],
           backgroundColor: colors[bg],
           fontSize: typography.fontSize[size],
           fontWeight: typography.fontWeight[weight],

@@ -26,7 +26,7 @@ export default function Button({
       style={[
         {
           backgroundColor: disabled
-            ? colors.text.secondary
+            ? colors.secondaryText
             : variant.backgroundColor,
           flexDirection: "row",
           alignItems: "center",

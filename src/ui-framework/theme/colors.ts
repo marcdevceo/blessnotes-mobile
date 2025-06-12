@@ -13,14 +13,12 @@ export const colors = {
   gold: "#FCD34D", // Warm light gold (joy, focus)
 
   // ✍️ Text
-  text: {
-    primary: "#FFFFFF",
-    secondary: "#FF33EE", 
-    neutral: "#EEE7FA",
-    accent: "#000", 
-    link: "#8B5CF6",
-    subdued: "#9CA3AF",
-  },
+  primaryText: "#FFFFFF",
+  secondaryText: "#FF33EE",
+  neutralText: "#EEE7FA",
+  accentText: "#000",
+  link: "#8B5CF6",
+  subdued: "#9CA3AF",
 
   // ✅ Feedback
   success: "#34D399", // Green (Success, Calm)

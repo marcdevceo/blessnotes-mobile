@@ -3,12 +3,12 @@ import { colors, typography, spacing } from "@/ui-framework/theme";
 export const buttonVariants = {
   primary: {
     backgroundColor: colors.accent,
-    textColor: colors.text.accent,
+    textColor: colors.accentText,
     fontWeight: typography.fontWeight.semibold,
   },
   secondary: {
     backgroundColor: colors.secondary,
-    textColor: colors.text.primary,
+    textColor: colors.primaryText,
     fontWeight: typography.fontWeight.medium,
   },
   outline: {

@@ -5,7 +5,7 @@ import { spacing } from "@/ui-framework/theme";
 
 export type BaseButtonProps = {
   title: string;
-  onPress: () => void;
+  onPress?: () => void;
   buttonVariant?: keyof typeof buttonVariants;
   buttonSize?: keyof typeof buttonSizes;
   fullWidth?: boolean;

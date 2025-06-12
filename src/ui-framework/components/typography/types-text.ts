@@ -8,7 +8,7 @@ export type TopLevelColorKeys = {
 export type BaseTextProps = {
   children: React.ReactNode;
   bg?: TopLevelColorKeys;
-  color?: keyof typeof colors.text;
+  color?: keyof typeof colors;
   size?: keyof typeof typography.fontSize;
   weight?: keyof typeof typography.fontWeight;
   italic?: boolean;

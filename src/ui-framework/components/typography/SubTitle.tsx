@@ -4,9 +4,9 @@ import { colors, spacing, typography } from "@/ui-framework/theme";
 
 export default function Subtitle({
   children,
-  color = "secondary",
+  color = "secondaryText",
   bg = "transparent",
-  size = "lg",
+  size = "2xl",
   weight = "extrabold",
   italic = false,
   align = "left",
@@ -22,7 +22,7 @@ export default function Subtitle({
   return (
     <Text
       style={[{
-        color: colors.text[color],
+        color: colors[color],
         backgroundColor: colors[bg],
         fontSize: typography.fontSize[size],
         fontWeight: typography.fontWeight[weight],

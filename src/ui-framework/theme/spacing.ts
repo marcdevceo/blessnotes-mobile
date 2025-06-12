@@ -12,3 +12,11 @@ export const spacing = {
   "6xl": 72,  // 4.5rem
 };
 
+export const spacingPercentage = {
+  quarter: "25%",
+  third: "33.3333%",
+  half: "50%",
+  twoThird: "66.6667%",
+  threeQuarter: "75%",
+  full: "100%"
+};
